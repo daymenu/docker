@@ -6,14 +6,12 @@ services:
   ports: 
    - 80:80
    - 81:81
-   - 82:82
   links: 
    - app-phpfpm
   depends_on: 
    - app-phpfpm
   volumes:
    - ./hello/:/www/hello/
-   - ./laravel/:/www/laravel/
  app-mysql:
   build: ./mysql
   container_name: mysql.app.host
@@ -27,4 +25,4 @@ services:
   depends_on: 
    - app-mysql
   volumes: 
-   - ./laravel/:/www/laravel/
+   - ./hello/:/www/hello/
