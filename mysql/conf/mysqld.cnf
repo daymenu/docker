@@ -45,7 +45,7 @@ long_query_time = 0
 slow_query_log_file = /var/log/docker_log/mysql/slow.log
 
 # set binlog_format
-binlog_format = STATEMENT
+binlog_format = row
 # open binlog
 log-bin=/var/log/mysql-binlog/mysql-binlog
 server-id = 1
